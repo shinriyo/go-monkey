@@ -259,7 +259,7 @@ func (fl *FunctionLiteral) String() string {
 	params := []string{}
 
 	for _, p := range fl.Parameters {
-		params.append(params, p.String())
+		params = append(params, p.String())
 	}
 
 	out.WriteString(fl.TokenLiteral())
