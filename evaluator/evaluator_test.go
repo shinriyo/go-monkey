@@ -331,6 +331,17 @@ func TestBuiltinFunctions(t *testing.T) {
 		{"last([])", nil},
 		{"last([1, 2, 3], [])", "wrong number of arguments. got=2, want=1"},
 		{`last("foo")`, "argument to `last` must be ARRAY, got STRING"},
+
+		{"rest([1, 2, 3])[0]", 2},
+		{"rest([1, 2, 3])[1]", 3},
+		{"rest([1, 2, 3])[2]", nil},
+		{"rest([3, 2, 1])[0]", 2},
+		{"rest([3, 2, 1])[1]", 1},
+		{"rest([3, 2, 1])[2]", nil},
+		{"rest([0])[0]", nil},
+		{"rest([])", nil},
+		{"rest([1, 2, 3], [])", "wrong number of arguments. got=2, want=1"},
+		{`rest("foo")`, "argument to `rest` must be ARRAY, got STRING"},
 	}
 
 	for _, tt := range tests {
