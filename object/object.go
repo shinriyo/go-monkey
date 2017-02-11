@@ -123,6 +123,10 @@ func (ao *Array) Inspect() string {
 	return out.String()
 }
 
+type Hashable interface {
+	HashKey() HashKey
+}
+
 type HashKey struct {
 	Type  ObjectType
 	Value uint64
