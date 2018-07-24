@@ -13,8 +13,17 @@ import (
 
 const PROMPT = ">> "
 
-const MONKEY_FACE = `
-HERE dummy MONKEY FACE
+const MONKEY_FACE = `            __,__
+   .--.  .-"     "-.  .--.
+  / .. \/  .-. .-.  \/ .. \
+ | |  '|  /   Y   \  |'  | |
+ | \   \  \ 0 | 0 /  /   / |
+  \ '- ,\.-"""""""-./, -' /
+   ''-' /_   ^ ^   _\ '-''
+       |  \._   _./  |
+       \   \ '~' /   /
+        '._ '-=-' _.'
+           '-----'
 `
 
 func Start(in io.Reader, out io.Writer) {
